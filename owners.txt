@@ -1,0 +1,14 @@
+OwnerInMyPrimitiveDatabase
+Owner
+1
+Piotr
+Sikroa
+Men
+21
+OwnerInMyPrimitiveDatabase
+Owner
+2
+Beata
+Wasilewsla
+women
+32
