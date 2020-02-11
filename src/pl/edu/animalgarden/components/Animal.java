@@ -99,6 +99,7 @@ public abstract class Animal extends Data implements Inform, Recordable {
     public void ownerInformation(){
         System.out.println("   - Owner: ");
         System.out.println("      - First name: " + this.owner.getFirstName());
+        System.out.println("      - Second name: " + this.owner.getSecondName());
         System.out.println("      - Last name: " + this.owner.getLastName());
         System.out.println("      - Sex: " + this.owner.getSex());
         System.out.println("      - Age: " + this.owner.getAge());

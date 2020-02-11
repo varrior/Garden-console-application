@@ -47,7 +47,7 @@ public class Garden {
             ownersStringList.stream()
                     .map(element -> element.split(" "))
                     .forEach(loadedOwner -> {
-                        Owner owner = new Owner(loadedOwner[2], loadedOwner[3], loadedOwner[4], Long.parseLong(loadedOwner[5]));
+                        Owner owner = new Owner(loadedOwner[2], loadedOwner[3], loadedOwner[4], loadedOwner[5],Long.parseLong(loadedOwner[6]));
                         owner.setId(Long.parseLong(loadedOwner[1]));
                         ownerRecord.addNewItemToList(owner);
                     });
@@ -100,6 +100,7 @@ public class Garden {
                     Scanner ownerScanner = new Scanner(System.in);
                     long age;
                     String firstName;
+                    String secondName;
                     String lastName;
                     String sex;
 
@@ -107,7 +108,14 @@ public class Garden {
                     do{
                         firstName = ownerScanner.nextLine();
                         if(firstName.length() < MIN_FIRSTNAME_LENGTH) System.out.println("First name must be at least 3 characters");
+
                     } while(firstName.length() < MIN_FIRSTNAME_LENGTH);
+
+                    System.out.println("What is the second name of the owner: ");
+                    do{
+                        secondName = ownerScanner.nextLine();
+                        if(secondName.length() < MIN_SECONDNAME_LENGTH) System.out.println("Second name must be at least 3 characters");
+                    } while(secondName.length() < MIN_SECONDNAME_LENGTH);
 
                     System.out.println("What is the last name of the owner: ");
                     do {
@@ -131,7 +139,7 @@ public class Garden {
                         if(age < MIN_OWNER_AGE || age > MAX_OWNER_AGE) System.out.println("You can't be at this age");
                     } while(age < MIN_OWNER_AGE || age > MAX_OWNER_AGE);
 
-                    ownerRecord.addNewItemToList(new Owner(firstName, lastName, sex, age));
+                    ownerRecord.addNewItemToList(new Owner(firstName, secondName, lastName, sex, age));
                     break;
                 }
                 case "2": {

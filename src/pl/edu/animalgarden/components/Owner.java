@@ -22,11 +22,13 @@ public class Owner extends Data implements Inform, Recordable {
 
     private long id;
     private String lastName;
+    private String secondName;
     private List<Animal> animals;
 
-    public Owner(String firstName, String lastName, String sex, long age) {
+    public Owner(String firstName,String secondName, String lastName, String sex, long age) {
         super(firstName, sex, age);
         this.id = ++ownerCount;
+        this.secondName = secondName;
         this.lastName = lastName;
         this.animals = new ArrayList<>();
     }
@@ -35,6 +37,7 @@ public class Owner extends Data implements Inform, Recordable {
         result += "Owner" + "\n";
         result += this.getId() + "\n";
         result += this.getFirstName() + "\n";
+        result += this.getSecondName() + "\n";
         result += this.getLastName() + "\n";
         result += this.getSex() + "\n";
         result += this.getAge() + "\n";
@@ -49,6 +52,7 @@ public class Owner extends Data implements Inform, Recordable {
     @Override
     public void showInformation() {
         System.out.println("   - First name: " + this.getFirstName());
+        System.out.println("   - Second name: " + this.getSecondName());
         System.out.println("   - Last name: " + this.lastName);
         System.out.println("   - Sex: " + this.getSex());
         System.out.println("   - Age: " + this.getAge());
@@ -84,6 +88,10 @@ public class Owner extends Data implements Inform, Recordable {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getSecondName() {
+        return secondName;
     }
 
     public void setLastName(String lastName) {

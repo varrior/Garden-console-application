@@ -4,6 +4,7 @@ public interface Constant {
     int GARDEN_SIZE = 10;
 
     int MIN_FIRSTNAME_LENGTH = 3;
+    int MIN_SECONDNAME_LENGTH = 3;
     int MIN_LASTNAME_LENGTH = 3;
     int MIN_SEX_LENGTH = 3;
     int MIN_OWNER_AGE = 0;
@@ -17,7 +18,7 @@ public interface Constant {
     int MIN_ANIMAL_BREED = 3;
 
     int ANIMAL_OBJECT_LENGTH = 9;
-    int OWNER_OBJECT_LENGTH = 7;
+    int OWNER_OBJECT_LENGTH = 8;
 
     enum Animals {
         DOG("Dog"),
